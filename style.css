@@ -53,6 +53,7 @@ body {
 /* player-2 */
 #player-2 {
   grid-area: B;
+  height: fit-content;
 }
 
 /* player-3 */
@@ -66,14 +67,26 @@ body {
   border-radius: 10px;
 }
 
+.player img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
 .info {
   color: #E1E1E6;
-  display: grid;
-  gap: 9.6px;
 }
 
 .info h1 {
   font-size: 24px;
+  margin-bottom: 9.6px;
 }
 
 .info p {
@@ -86,6 +99,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.horizontal .controls {
+  padding-inline: 38px;
 }
 
 .track {
@@ -124,4 +141,21 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 9.6px;
+}
+
+@media (max-width: 670px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 270px;
+    margin: auto;
+
+    height: auto;
+    padding-block: 60px;
+  }
+}
+
+.horizontal .controls {
+  padding-inline: 30px;
 }
